@@ -14,8 +14,8 @@ The designs were created to the following widths:
 ### Primary
 
 - White: hsl(0, 100%, 100%)
-- Grey 500: hsl(0, 0%, 63%)
-- Grey 800: hsl(0, 0%, 27%)
+- Grey 500: #a1a1a1ff
+- Grey 800: #454545ff
 - Black: hsl(0, 0%, 0%)
 
 ## Typography

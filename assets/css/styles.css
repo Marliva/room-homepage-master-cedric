@@ -1,18 +1,17 @@
-body{
-    background-color: grey;
-}
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
 }
 
-img, input{
+img,
+input {
     vertical-align: bottom;
     width: 100%;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -20,34 +19,245 @@ ul{
 /* ----------------------------------- */
 
 /* ------HEADER------ */
-#menu{
+#menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* width: 60%; */
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    padding: 0 1.5rem;
 }
 
-#openmenu{
+.vide {
+    width: 20px;
+}
+
+
+/* ------GESTION DU BURGER------ */
+#openmenu {
     display: none;
 }
 
-#menu ul{
+#menu ul {
     display: none;
 }
 
-#menu #openmenu:not(:checked)~ul{ /*vaut false*/
+#menu #openmenu:not(:checked)~ul {
+    /*vaut false*/
     display: none;
 }
 
-#menu #openmenu:checked~ul{ /*vaut true*/
+#menu #openmenu:checked~ul {
+    /*vaut true*/
     display: block;
 }
 
 
-#menu #openmenu:not(:checked)~label>img{
+#menu #openmenu:not(:checked)~label>img {
     content: url("../images/icon-hamburger.svg");
 }
 
-#menu #openmenu:checked~label>img{
+#menu #openmenu:checked~label>img {
     content: url("../images/icon-close.svg");
 }
+
+
+/* ------HERO------ */
+
+.heroContainer {
+    background-image: url("../images/mobile-image-hero-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    position: relative;
+}
+
+.heroArrows {
+    width: 25vw;
+    height: 6vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+
+}
+
+.leftArrow,
+.rightArrow {
+    cursor: pointer;
+    background-color: black;
+    width: 15vw;
+    display: flex;
+    padding: .9rem;
+
+}
+
+/* ------MAIN------ */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ------DISCOVER------ */
+
+.discover {
+    margin: 1.5rem;
+    text-align: left;
+}
+
+.discoverText {
+    margin-top: 3rem;
+}
+
+.discoverText h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.discoverText p {
+    color: #a1a1a1ff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+}
+
+.discoverText button {
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 0.2rem;
+}
+
+.discoverText button img {
+    margin-left: 2rem;
+    width: 15%;
+    padding-bottom: 0.2rem;
+}
+
+/* ------IMG DARK------ */
+
+.imgDark {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ------ABOUT------ */
+
+.about {
+    margin: 1.5rem;
+    text-align: left;
+}
+
+.aboutText h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.aboutText p {
+    color: #a1a1a1ff;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+
+/* ------IMG LIGHT------ */
+
+.imgLight {
+    margin-top: 3rem;
+}
+
+/* ------MEDIA QUERIES------ */
+
+@media screen and (min-width: 576px) {
+
+    #menu {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        z-index: 2;
+    }
+
+    #menu :nth-child(3) {
+        order: 2;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #menu #openmenu:not(:checked)~ul,
+    #menu #openmenu:checked~ul {
+        display: block;
+    }
+
+    ul li {
+        display: inline;
+        padding-left: 4rem;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .heroContainer {
+        background-image: url("../images/desktop-image-hero-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        width: 60vw;
+        height: 70vh;
+        z-index: 1;
+    }
+
+    .heroArrows {
+        position: absolute;
+        width: 10vw;
+        height: 8vh;
+        bottom: unset;
+        right: unset;
+        top: 62vh;
+        left: 60vw;
+    }
+
+    .leftArrow:hover,
+    .rightArrow:hover {
+        background-color: #454545ff;
+    }
+
+    .discover {
+        width: 35vw;
+        padding: 6rem 3rem 0 2rem;
+    }
+
+    .discoverText h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .discoverText p {
+        margin-bottom: 2rem;
+    }
+
+    
+        
+}
+        
+
+
+
