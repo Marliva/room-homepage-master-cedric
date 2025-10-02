@@ -1,0 +1,53 @@
+body{
+    background-color: grey;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, input{
+    vertical-align: bottom;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* ----------------------------------- */
+
+/* ------HEADER------ */
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 60%; */
+}
+
+#openmenu{
+    display: none;
+}
+
+#menu ul{
+    display: none;
+}
+
+#menu #openmenu:not(:checked)~ul{ /*vaut false*/
+    display: none;
+}
+
+#menu #openmenu:checked~ul{ /*vaut true*/
+    display: block;
+}
+
+
+#menu #openmenu:not(:checked)~label>img{
+    content: url("../images/icon-hamburger.svg");
+}
+
+#menu #openmenu:checked~label>img{
+    content: url("../images/icon-close.svg");
+}
